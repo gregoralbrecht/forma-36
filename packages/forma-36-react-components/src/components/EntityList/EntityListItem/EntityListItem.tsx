@@ -262,7 +262,7 @@ export function EntityListItem({
                   position="bottom-right"
                   toggleElement={
                     <Button
-                      disabled={isActionsDisabled}
+                      isDisabled={isActionsDisabled}
                       icon={MoreHorizontal}
                       label="Actions"
                       onClick={handleActionClick}
