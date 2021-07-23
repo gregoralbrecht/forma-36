@@ -2,10 +2,10 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe } from '@/scripts/test/axeHelper';
+import { DragHandle } from '@contentful/f36-drag-handle';
 
 import { EntityListItem } from './EntityListItem';
 import { DropdownList, DropdownListItem } from '../../Dropdown';
-import { CardDragHandle } from './../../Card';
 
 it('renders the component', () => {
   const { container } = render(
@@ -99,7 +99,7 @@ it('renders the component with custom drag handle', () => {
       description="Description"
       contentType="Content type"
       status="published"
-      cardDragHandleComponent={<CardDragHandle>Reorder card</CardDragHandle>}
+      cardDragHandleComponent={<DragHandle label="Reorder card" />}
     />,
   );
 
