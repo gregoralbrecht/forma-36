@@ -81,37 +81,49 @@ const _DragHandle: PolymorphicComponentWithRef<
   const [isFocused, setisFocused] = useState(isFocusedProp);
   const [isHovered, setisHovered] = useState(isHoveredProp);
 
-  const handleFocus = useCallback<FocusEventHandler>((event) => {
-    setisFocused(true);
+  const handleFocus = useCallback<FocusEventHandler>(
+    (event) => {
+      setisFocused(true);
 
-    if (onFocus) {
-      onFocus(event);
-    }
-  }, []);
+      if (onFocus) {
+        onFocus(event);
+      }
+    },
+    [onFocus],
+  );
 
-  const handleBlur = useCallback<FocusEventHandler>((event) => {
-    setisFocused(false);
+  const handleBlur = useCallback<FocusEventHandler>(
+    (event) => {
+      setisFocused(false);
 
-    if (onBlur) {
-      onBlur(event);
-    }
-  }, []);
+      if (onBlur) {
+        onBlur(event);
+      }
+    },
+    [onBlur],
+  );
 
-  const handleMouseEnter = useCallback<MouseEventHandler>((event) => {
-    setisHovered(true);
+  const handleMouseEnter = useCallback<MouseEventHandler>(
+    (event) => {
+      setisHovered(true);
 
-    if (onMouseEnter) {
-      onMouseEnter(event);
-    }
-  }, []);
+      if (onMouseEnter) {
+        onMouseEnter(event);
+      }
+    },
+    [onMouseEnter],
+  );
 
-  const handleMouseLeave = useCallback<MouseEventHandler>((event) => {
-    setisHovered(false);
+  const handleMouseLeave = useCallback<MouseEventHandler>(
+    (event) => {
+      setisHovered(false);
 
-    if (onMouseLeave) {
-      onMouseLeave(event);
-    }
-  }, []);
+      if (onMouseLeave) {
+        onMouseLeave(event);
+      }
+    },
+    [onMouseLeave],
+  );
 
   return (
     <Element
