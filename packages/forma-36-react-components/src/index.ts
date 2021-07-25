@@ -7,6 +7,18 @@ export type {
   IconSize,
   IconVariant,
 } from '@contentful/f36-icon';
+export {
+  AssetCard,
+  Card,
+  EntryCard,
+  InlineEntryCard,
+} from '@contentful/f36-card';
+export type {
+  AssetCardProps,
+  CardProps,
+  EntryCardProps,
+  InlineEntryCardProps,
+} from '@contentful/f36-card';
 export { Flex, Grid, GridItem, Box } from '@contentful/f36-core';
 export type {
   FlexProps,
@@ -73,7 +85,6 @@ export * from './components/Accordion';
 export * from './components/Asset';
 export * from './components/Autocomplete';
 export * from './components/Button';
-export * from './components/Card';
 export * from './components/CopyButton';
 export * from './components/Dropdown';
 export * from './components/EditorToolbar';

@@ -14,10 +14,11 @@ export const styles = {
   }),
   root: css({
     alignItems: 'center',
-    backgroundColor: tokens.colorElementLightest,
+    backgroundClip: 'border-box',
     border: 0,
-    // @todo: gray / 200
+    borderBottomLeftRadius: tokens.borderRadiusMedium,
     borderRight: `1px solid ${tokens.colorElementMid}`,
+    borderTopLeftRadius: tokens.borderRadiusMedium,
     boxSizing: 'border-box',
     display: 'flex',
     justifyContent: 'center',
